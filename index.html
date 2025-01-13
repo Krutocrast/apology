@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,5 +44,115 @@
             I'm sorry for the pain I've caused,
             For every tear, I feel so lost." 💫</p>
     </div>
+</body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am sorry, Sri</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #ffe6f2, #ffd1e8); /* Softer gradient */
+            overflow: hidden;
+            color: #333; /* Darker text for better contrast */
+        }
+
+        h1 {
+            color: #ff69b4; /* Brighter pink */
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite alternate;
+            margin-bottom: 0.5em; /* Reduced margin */
+        }
+
+        .emoji {
+            font-size: 2.5em; /* Larger emoji */
+            margin-bottom: 1em;
+            animation: bounce 1s infinite alternate;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.7; /* Increased line height */
+            max-width: 700px; /* Wider text area */
+            padding: 0 30px;
+            font-size: 1.1em; /* Slightly larger font */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle text shadow */
+        }
+
+        /* Keyframe animations */
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); } /* Less intense pulse */
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-8px); } /* Smaller bounce */
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 1.8em; /* Slightly larger hearts */
+            color: #ff1493; /* Deeper pink/magenta */
+            animation: fall linear infinite;
+            opacity: 0; /* Start invisible */
+            animation-delay: calc(var(--delay) * 1s); /* Delay based on custom property */
+        }
+
+        @keyframes fall {
+            0% { transform: translate3d(0, -100vh, 0) rotate(0deg); opacity: 0; }
+            20% { opacity: 1;} /* Fade in quicker */
+            80% {opacity: 1;} /* Fade out later */
+            100% { transform: translate3d(0, 100vh, 0) rotate(360deg); opacity: 0; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .emoji { font-size: 2em; }
+            p { font-size: 1em; padding: 0 20px;}
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 2em; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>💖 I am sorry, Sri 💖</h1>
+    <p class="emoji">😔🙏</p>
+    <p>"In your eyes, I find my peace,  <br>
+       In your smile, my joys never cease.  <br>
+       I'm sorry for the pain I've caused,  <br>
+       For every tear, I feel so lost." 💫</p>
+
+    <script>
+        const numHearts = 30;
+        const body = document.body;
+
+        for (let i = 0; i < numHearts; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '💖';
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.animationDuration = `${Math.random() * 4 + 3}s`; // Longer duration range
+            heart.style.setProperty('--delay', Math.random() * 5); // Set custom delay property
+            body.appendChild(heart);
+        }
+    </script>
+
 </body>
 </html>
